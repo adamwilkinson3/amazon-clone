@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { FaCaretDown, FaUserAlt } from 'react-icons/fa'
 import '../Styles/account.css'
 
-function Account({ setFocus, setInputDropdown}) {
+function Account({ setInputDropdown }) {
 
     const [languageDropdown, setLanguageDropdown] = useState(false)
 
@@ -35,7 +35,7 @@ function Account({ setFocus, setInputDropdown}) {
             <div className='column-container column-container1'>
                 <div className='buyagain-top'>
                     <h3>Buy it again</h3>
-                    <a>View All & Manage</a>
+                    <p>View All & Manage</p>
                 </div>
                 <div className='buyagain-body'>
                     {buyagain.map((item) => {
@@ -45,8 +45,8 @@ function Account({ setFocus, setInputDropdown}) {
                             {item.img}
                         </div>
                         <div className='buyagain-content'>
-                            <a className='productName'>{item.productName}</a>
-                            <div><a className='price'>{item.price}</a></div>
+                            <p className='productName'>{item.productName}</p>
+                            <div><p className='price'>{item.price}</p></div>
                             <button>Add to Cart</button>
                         </div>
                     </div>
@@ -56,18 +56,18 @@ function Account({ setFocus, setInputDropdown}) {
             </div>
                <div className='column-container column-container2'>
                     <h3>Your Lists</h3>
-                    <a>Wish List</a>
-                    <a>Save & Compare</a>
+                    <p>Wish List</p>
+                    <p>Save & Compare</p>
                     <div className='bar'></div>
-                    <a>Create a List</a>
-                    <a>Find a List or Registry</a>
-                    <a>AmazonSmile Charity Lists</a>
+                    <p>Create a List</p>
+                    <p>Find a List or Registry</p>
+                    <p>AmazonSmile Charity Lists</p>
                </div>
                <div className='bar-vertical'></div>
                <div className='column-container column-container2'>
                     <h3>Your Account</h3>
                     {yourAccountList.map((item) => {
-                        return <a>{item}</a>
+                        return <p>{item}</p>
                     })}
                </div>
         </div>

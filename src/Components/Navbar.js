@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import '../Styles/navbar.css'
-import { FaAmazon, FaCaretDown, FaShoppingCart, FaBars, FaMapMarkerAlt } from 'react-icons/fa'
+import { FaAmazon, FaShoppingCart, FaBars, FaMapMarkerAlt } from 'react-icons/fa'
 import Dropdown from './Dropdown'
 import Language from './Language'
 import Account from './Account'

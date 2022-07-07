@@ -10,14 +10,14 @@
     height: 530px;
     top: 45px;
     right: 100px;
-}
-a {
-    color: $linkcolor;
-}
-a:hover {
-    text-decoration: underline;
-    text-decoration-color: orange;
-    color: orange;
+    p {
+        color: $linkcolor;
+    }
+    p:hover {
+        text-decoration: underline;
+        text-decoration-color: orange;
+        color: orange;
+    }
 }
 .input-dropdown4 {
     display: flex;
@@ -68,11 +68,11 @@ a:hover {
     h3 {
         padding-bottom: 10px;
     }
-    a {
+    p {
         color: black;
         cursor: pointer;
     }
-    a:hover {
+    p:hover {
         color: orange;
     }
 }

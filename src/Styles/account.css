@@ -19,11 +19,11 @@
   right: 100px;
 }
 
-a {
+.outer-dropdown2 p {
   color: #0084c1;
 }
 
-a:hover {
+.outer-dropdown2 p:hover {
   text-decoration: underline;
   -webkit-text-decoration-color: orange;
           text-decoration-color: orange;
@@ -98,12 +98,12 @@ a:hover {
   padding-bottom: 10px;
 }
 
-.column-container2 a {
+.column-container2 p {
   color: black;
   cursor: pointer;
 }
 
-.column-container2 a:hover {
+.column-container2 p:hover {
   color: orange;
 }
 
