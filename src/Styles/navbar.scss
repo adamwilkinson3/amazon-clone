@@ -141,7 +141,7 @@ button:hover {
     button {
         color: black
     }
-    a {
+    .tags {
         padding: 15px 0 0 20px;
     }
 }
@@ -158,10 +158,10 @@ button:hover {
     padding: 12px;
     display: flex;
     flex-direction: column;
-    a {
+    .tags {
         color: $linkcolor;
     }
-    a:hover {
+    .tags:hover {
         text-decoration: underline;
         text-decoration-color: orange;
     }

@@ -22,12 +22,12 @@ function Language({ setFocus, setInputDropdown }) {
                 <label>
                     <input type="radio" name='language' checked={!language} /> <span>espa&#241;ol - ES</span>
                 </label>
-                <a>Learn more</a>
+                <div className='tags'>Learn more</div>
             </div>
             <div className='bar'></div>
             <div className='language-content'>
                 <p><FaFlagUsa /> You are shopping on Amazon.com</p>
-                <a>Change country/region.</a>
+                <div className='tags'>Change country/region.</div>
             </div>
         </form>
     </div>

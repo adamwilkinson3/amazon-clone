@@ -195,7 +195,7 @@ button:hover {
   color: black;
 }
 
-.input-dropdown3 a {
+.input-dropdown3 .tags {
   padding: 15px 0 0 20px;
 }
 
@@ -227,11 +227,11 @@ button:hover {
           flex-direction: column;
 }
 
-.language-content a {
+.language-content .tags {
   color: #0084c1;
 }
 
-.language-content a:hover {
+.language-content .tags:hover {
   text-decoration: underline;
   -webkit-text-decoration-color: orange;
           text-decoration-color: orange;
