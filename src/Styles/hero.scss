@@ -1,0 +1,68 @@
+@import './Variables/variables';
+
+.body-top {
+    height: 700px;
+        max-width: 1640px;
+        display: flex;
+        position: absolute;
+        left: calc((100% - 1640px) / 2 + 2rem);
+        right: calc((100% - 1640px) / 2 + 2rem);
+}
+.hero-container {
+    max-width: 1640px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+.hero {
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    width: 1640px;
+    overflow-y: hidden;
+}
+.hero > p {
+    position: relative;
+    top: 150px;
+}
+.arrows {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  position: relative;
+  z-index: 1;
+  justify-content: center;
+}
+.middle {
+  display: flex;
+  max-width: 1370px;
+  flex-grow: 1;
+  cursor: pointer;
+}
+.shift-button {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    font-size: 2em;
+    height: 297px;
+}
+.shift-button:hover {
+    outline: none;
+}
+.shift-button:focus {
+    outline: white solid 2px;
+    border: $linkcolor solid 2px;
+    border-radius: 2px;
+}
+@media (max-width: 1640px) {
+    .hero {
+        width: 100vw;
+    }
+    .body-top {
+        left: 0;
+        right: 0;
+    }
+}

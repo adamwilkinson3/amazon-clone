@@ -1,0 +1,179 @@
+.outer-dropdown2 {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 800px;
+  height: 530px;
+  top: 45px;
+  right: 100px;
+}
+
+a {
+  color: #0084c1;
+}
+
+a:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-color: orange;
+          text-decoration-color: orange;
+  color: orange;
+}
+
+.input-dropdown4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 95%;
+  height: 95%;
+  border-radius: 1.5px;
+  -webkit-box-shadow: 0 0 0 1px grey;
+          box-shadow: 0 0 0 1px grey;
+}
+
+.input-dropdown4::before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid white;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid white;
+  left: 715px;
+  top: 5px;
+  background-color: white;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.column-container {
+  background-color: white;
+  width: 100%;
+  font-size: 14px;
+}
+
+.column-container h3 {
+  cursor: text;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
+}
+
+.column-container1 {
+  border-right: 1px solid grey;
+  padding: 15px;
+}
+
+.column-container2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 15px;
+  line-height: 1.5em;
+}
+
+.column-container2 .bar {
+  width: 90%;
+  left: 0%;
+  margin: 5px 0px;
+}
+
+.column-container2 h3 {
+  padding-bottom: 10px;
+}
+
+.column-container2 a {
+  color: black;
+  cursor: pointer;
+}
+
+.column-container2 a:hover {
+  color: orange;
+}
+
+.bar-vertical {
+  -webkit-box-shadow: 0 0 0 .2px grey;
+          box-shadow: 0 0 0 .2px grey;
+  height: 95%;
+  position: relative;
+  top: 2.5%;
+}
+
+.buyagain-top {
+  margin-bottom: 10px;
+  line-height: 1.5em;
+}
+
+.buyagain-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.img {
+  width: 150px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.buyagain-content {
+  width: 100%;
+  color: orange;
+  padding: 5px 10px;
+  line-height: 1.2em;
+}
+
+.buyagain-content a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.buyagain-content .price {
+  color: orange;
+}
+
+.buyagain-content .price:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.buyagain-content button {
+  background-color: orange;
+  color: black;
+  border-radius: 4px;
+}
+
+.buyagain-content button:hover {
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+}
+/*# sourceMappingURL=account.css.map */

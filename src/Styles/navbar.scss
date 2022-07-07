@@ -1,0 +1,330 @@
+@import './Variables/variables';
+* {
+    margin: 0;
+}
+.App {
+    background-color: lightgrey;
+}
+.navbar {
+    user-select: none;
+}
+@mixin dropdown {
+    background-color: white;
+    outline: grey solid 1px;
+    button {
+        margin: 0;
+    }
+    button:hover {
+        outline: none;
+        border-radius: none;
+    }
+}
+button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 5px;
+    margin: 5px;
+    text-align: left;
+    cursor: pointer;
+    white-space: nowrap;
+}
+button:hover {
+    outline: 1.5px solid white;
+    border-radius: 1px;
+}
+.amazon-icon {
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.preinput {
+    color: rgb(88, 88, 88);
+    background-color: rgb(236, 232, 232);
+    border-radius: 4px 0px 0px 4px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 10px;
+    height: 100%;
+}
+.preinput:hover {
+    outline: none;
+    background-color: hsl(0,0,85);
+    border-radius: 4px 0px 0px 4px;
+}
+.preinput:focus {
+    @extend .preinput:hover;
+    box-shadow: 0 0 0 3px orange;
+    // margin-right: 3px;
+}
+.space {
+    background-color: white;
+    width: 3px;
+    height: 100%;
+}
+.input-search {
+    // flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 1.1em;
+    padding-left: 7px;
+    width: calc(100% - 9px);
+    height: calc(100% - 2px);
+}
+.input-dropdown {
+    @include dropdown;
+    width: calc(100% + 33px);
+    position: relative;
+    button {
+        color: black;
+        font-weight: bold;
+        font-size: 1.2em;
+        width: 100%;
+    }
+    button:hover {
+        background-color: lightgrey;
+    }
+}
+.search {
+    color: $primarytop;
+    background-color: orange;
+    border-radius: 0px 4px 4px 0px;
+    margin: 0;
+    padding: 8px;
+}
+.search:hover {
+    outline: none;
+    background-color: hsl(39, 100, 45);
+    border-radius: 0px 4px 4px 0px;
+}
+.search:focus {
+    @extend .search:hover;
+    box-shadow: 0 0 0 3px orange;
+    margin-left: 3px;
+}
+
+.dropdown-container2 {
+    z-index: 4;
+}
+.input-dropdown2 {
+    @include dropdown;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    overflow-y: scroll;
+    button {
+        color: black;
+        font-weight: bold;
+    }
+    button:hover {
+        background-color: #03a9f4;
+        color: white;
+    }
+}
+.dropdown-container3 {
+    display: flex;
+    z-index: 4;
+}
+.input-dropdown3 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px grey;
+    width: 90%;
+    height: 90%;
+    top: 10px;
+    button {
+        color: black
+    }
+    a {
+        padding: 15px 0 0 20px;
+    }
+}
+.outer-dropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 230px;
+    height: 240px;
+    top: 42px;
+}
+.language-content {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    a {
+        color: $linkcolor;
+    }
+    a:hover {
+        text-decoration: underline;
+        text-decoration-color: orange;
+    }
+    label:hover {
+        color: orange;
+        span {
+            text-decoration: underline;
+        }
+    }
+    input[type="radio"]:checked + span:hover {
+        color: black;
+        text-decoration: none;
+    }
+    input[type="radio"]:checked {
+        background-color: orange;
+    }
+}
+.language-content::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid white;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid white;
+    left: 13px;
+    top: -10px;
+    background-color: white;
+    transform: rotate(-135deg);
+}
+
+.bar {
+    border-bottom: 1px solid lightgrey;
+    width: 70%;
+    position: relative;
+    left: 15%;
+}
+.cart-img {
+    font-size: 2em;
+    margin-right: 4px;
+}
+.cart-quantity {
+    color: orange;
+    font-size: 1.3em;
+    position: relative;
+    left: 32%;
+    bottom: 45%;
+    font-weight: bold;
+}
+.top-bar {
+    display: flex;
+    width: 100%;
+    background-color: rgb(0, 4, 40);
+    height: 60px;
+}
+.search-bar {
+    flex-grow: 1;
+    display: flex;
+    margin: 10px;
+}
+.hide-dropdown {
+    display: none;
+}
+.dropdown-container {
+    width: 100%;
+    z-index: 4;
+}
+
+.outline-all:focus-within {
+    box-shadow: 0 0 0 3px orange;
+    border-radius: 6px;
+}
+.location {
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 701px) {
+    .bottom-bar {
+        width: 100%;
+        background-color: rgb(33, 33, 59);
+        display: flex;
+        @media (max-width: 0px) { button:nth-of-type(1) { display: none; } }
+        @media (max-width: 0px) { button:nth-of-type(2) { display: none; } }
+        @media (max-width: 0px) { button:nth-of-type(3) { display: none; } }
+        @media (max-width: 0px) { button:nth-of-type(4) { display: none; } }
+        @media (max-width: 480px) { button:nth-of-type(5) { display: none; } }
+        @media (max-width: 535px) { button:nth-of-type(6) { display: none; } }
+        @media (max-width: 630px) { button:nth-of-type(7) { display: none; } }
+        @media (max-width: 735px) { button:nth-of-type(8) { display: none; } }
+        @media (max-width: 865px) { button:nth-of-type(9) { display: none; } }
+        @media (max-width: 945px) { button:nth-of-type(10) { display: none; } }
+        @media (max-width: 1105px) { button:nth-of-type(11) { display: none; } }
+        @media (max-width: 1200px) { button:nth-of-type(12) { display: none; } }
+        @media (max-width: 1285px) { button:nth-of-type(13) { display: none; } }
+        @media (max-width: 1360px) { button:nth-of-type(14) { display: none; } }
+        @media (max-width: 1460px) { button:nth-of-type(15) { display: none; } }
+        @media (max-width: 1600px) { button:nth-of-type(16) { display: none; } }
+        @media (max-width: 1680px) { button:nth-of-type(17) { display: none; } }
+        @media (max-width: 1815px) { button:nth-of-type(18) { display: none; } }
+        @media (max-width: 1935px) { button:nth-of-type(19) { display: none; } }
+        @media (max-width: 2015px) { button:nth-of-type(20) { display: none; } }
+        @media (max-width: 2080px) { button:nth-of-type(21) { display: none; } }
+    }
+    .deliver-mobile, .all-mobile, .empty, .shopping-cart-mobile, .account-mobile {
+        display: none;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .language, .orders, .deliver, .all, .dropdown-container2, .shopping-cart, .account, .space {
+        display: none;
+    }
+    .grid {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: auto auto 1fr auto auto;
+        height: auto;
+    }
+    .grid2 {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+    .search-bar {
+       grid-row-start: 2;
+       grid-column: 1 / 6;
+       margin-top: 0;
+    }
+    .bottom-bar {
+        grid-row-start: 2;
+    }
+    .grid-bottom {
+        display: flex;
+        background-color: $primarytop;
+        width: 100%;
+        overflow-x: scroll;
+    }
+    .deliver-mobile {
+        background-color: $secondarytop;
+        display: flex;
+    }
+    .input-search {
+        border-radius: 2px 0 0 2px;
+    }
+    .input-dropdown {
+        position: absolute;
+        top: 98px;
+        width: calc(100% - 20px);
+    }
+    .outline-all:focus-within {
+        box-shadow: none;
+    }
+    .search:focus {
+        margin: 0;
+        box-shadow: none;
+    }
+    .all-mobile, .amazon-icon {
+        font-size: 1.4em;
+    }
+    .cart-quantity {
+        left: 50%;
+    }
+    button:hover {
+        outline: none;
+    }
+}
